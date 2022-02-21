@@ -681,6 +681,13 @@
     "optional" "0.1.4"
     "tslib" "2.3.1"
 
+"@nestjs/typeorm@^8.0.3":
+  "integrity" "sha512-tf9rTXP6LeFInkwd+tktQhtLRsKp4RRYImprqT8gcHcJDx+xMP1IygnXELOKwF5vo2/mnhrGtBlRQ/iiS6170g=="
+  "resolved" "https://registry.npmjs.org/@nestjs/typeorm/-/typeorm-8.0.3.tgz"
+  "version" "8.0.3"
+  dependencies:
+    "uuid" "8.3.2"
+
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
   "resolved" "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"
@@ -3758,7 +3765,7 @@
   "resolved" "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.8.tgz"
   "version" "0.0.8"
 
-"mysql2@*":
+"mysql2@^2.2.5":
   "integrity" "sha512-wxJUev6LgMSgACDkb/InIFxDprRa6T95+VEoR+xPvtngtccNH2dGjEB/fVZ8yg1gWv1510c9CvXuJHi5zUm0ZA=="
   "resolved" "https://registry.npmjs.org/mysql2/-/mysql2-2.3.3.tgz"
   "version" "2.3.3"
@@ -4066,7 +4073,7 @@
     "postgres-date" "~1.0.4"
     "postgres-interval" "^1.1.0"
 
-"pg@*", "pg@^8.7.3", "pg@>=8.0":
+"pg@^8.5.1", "pg@^8.7.3", "pg@>=8.0":
   "integrity" "sha512-HPmH4GH4H3AOprDJOazoIcpI49XFsHCe8xlrjHkWiapdbHK+HLtbm/GQzXYAZwmPju/kzKhjaSfMACG+8cgJcw=="
   "resolved" "https://registry.npmjs.org/pg/-/pg-8.7.3.tgz"
   "version" "8.7.3"
@@ -5052,10 +5059,10 @@
   "resolved" "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   "version" "0.0.6"
 
-"typeorm@^0.2.41":
-  "integrity" "sha512-/d8CLJJxKPgsnrZWiMyPI0rz2MFZnBQrnQ5XP3Vu3mswv2WPexb58QM6BEtmRmlTMYN5KFWUz8SKluze+wS9xw=="
-  "resolved" "https://registry.npmjs.org/typeorm/-/typeorm-0.2.41.tgz"
-  "version" "0.2.41"
+"typeorm@^0.2.34", "typeorm@^0.2.43":
+  "integrity" "sha512-j4SU8I0PsMWtF64s/9tOJmlexzfDsvXhTjSE2GXdSseUN8TYyfbCm/fJnC6lx3uHgBJL4z9bE8U/7qyC/FVmNw=="
+  "resolved" "https://registry.npmjs.org/typeorm/-/typeorm-0.2.43.tgz"
+  "version" "0.2.43"
   dependencies:
     "@sqltools/formatter" "^1.2.2"
     "app-root-path" "^3.0.0"
@@ -5070,6 +5077,7 @@
     "reflect-metadata" "^0.1.13"
     "sha.js" "^2.4.11"
     "tslib" "^2.1.0"
+    "uuid" "^8.3.2"
     "xml2js" "^0.4.23"
     "yargs" "^17.0.1"
     "zen-observable-ts" "^1.0.0"
@@ -5116,7 +5124,7 @@
   "resolved" "https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz"
   "version" "1.0.1"
 
-"uuid@8.3.2":
+"uuid@^8.3.2", "uuid@8.3.2":
   "integrity" "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg=="
   "resolved" "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz"
   "version" "8.3.2"
