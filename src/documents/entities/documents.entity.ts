@@ -1,8 +1,8 @@
 import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
-import {events} from '../../events/entities/events.entity';
+import {Events} from '../../events/entities/events.entity';
 
 @Entity()
-export class documents {
+export class Documents {
     @PrimaryGeneratedColumn()
     id: number;
   

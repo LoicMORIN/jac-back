@@ -1,20 +1,23 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
-import {users} from '../../users/entities/users.entity';
-import {events} from '../../events/entities/events.entity'; 
+import {Entity, PrimaryGeneratedColumn, Column,ManyToOne} from "typeorm";
+import {Users} from '../../users/entities/users.entity';
+import {Events} from '../../events/entities/events.entity'; 
 
 
 @Entity()
-export class registrations {
+export class Registrations {
     @PrimaryGeneratedColumn()
     id: number;
   
-    @Column("int")
-    user_id: number;
-  
-    @Column("int")
-    event_id: number;
+    @Column()
+    public user_id!: number;
 
-    @ManyToOne(type => users, user_id => user.registrations)
-    user_id: users.id;
+    @Column()
+    public event_id!: number;
+
+    @ManyToOne(() => Users, users => users.id)
+    public user!: Users;
+
+    @ManyToOne(() => Events, events => events.id)
+    public event!: Events;
   }
   

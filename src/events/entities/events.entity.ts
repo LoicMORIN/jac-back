@@ -1,10 +1,10 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
-import {users} from '../../users/entities/users.entity';
+import {Entity, PrimaryGeneratedColumn, Column, OneToMany} from "typeorm";
+import {Documents} from '../../documents/entities/documents.entity';
 
-export type events_category = "C1" | "C2" | "C3" | "C4"
+export enum events_category { "C1",  "C2", "C3", "C4" }
 
 @Entity()
-export class events {
+export class Events {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -28,7 +28,7 @@ export class events {
 
   @Column({
     type: "enum",
-    enum: ["C1","C2","C3","C4"]
+    enum: events_category
   })
   category: events_category;
 
@@ -37,4 +37,7 @@ export class events {
 
   @Column("datetime")
   created_at: Date;
+
+  @OneToMany(() => Documents, document => document.id)
+  documents: Documents[];
 }

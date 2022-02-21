@@ -1,8 +1,8 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
-import {roles} from '../../roles/entities/roles.entity';
+import {Entity, PrimaryGeneratedColumn, Column,ManyToOne} from "typeorm";
+import {Roles} from '../../roles/entities/roles.entity';
 
 @Entity()
-export class users {
+export class Users {
   @PrimaryGeneratedColumn()
   id: number;
   
@@ -29,5 +29,8 @@ export class users {
   
   @Column("bool")
   is_active: boolean;
+
+  @ManyToOne(() => Roles, roles => roles.id)
+  role: Roles;
 }
   
