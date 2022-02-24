@@ -1,5 +1,5 @@
 import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
-import {Events} from '../../events/entities/events.entity';
+
 
 @Entity()
 export class Documents {

@@ -1,5 +1,6 @@
-import {Entity, PrimaryGeneratedColumn, Column,ManyToOne} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column,ManyToOne, OneToMany} from "typeorm";
 import {Roles} from '../../roles/entities/roles.entity';
+import { Registrations } from "../../registrations/entities/registrations.entity";
 
 @Entity()
 export class Users {
@@ -31,6 +32,9 @@ export class Users {
   is_active: boolean;
 
   @ManyToOne(() => Roles, roles => roles.id)
-  role: Roles;
+  roles: Roles;
+
+  @OneToMany(() => Registrations, registrations => registrations.user_id )
+  registrations: Registrations[];
 }
   
