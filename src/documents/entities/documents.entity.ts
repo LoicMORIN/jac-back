@@ -7,7 +7,7 @@ export class Documents {
     id: number;
   
     @Column("int")
-    event_id: number;
+    eventId: number;
   
     @Column("varchar", { length: 255 })
     title: string;

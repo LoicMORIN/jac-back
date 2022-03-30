@@ -14,27 +14,27 @@ export class Users {
   password: string;
   
   @Column("varchar", { length: 255 })
-  first_name: string;
+  firstName: string;
   
   @Column("varchar", { length: 255 })
-  last_nam: string;
+  lastName: string;
   
   @Column("datetime")
   date_of_birth: Date;
   
   @Column("int")
-  role_id: number;
+  roleId: number;
   
   @Column("timestamp")
-  created_at: Date;
+  createdAt: Date;
   
   @Column("bool")
-  is_active: boolean;
+  isActive: boolean;
 
   @ManyToOne(() => Roles, roles => roles.id)
   roles: Roles;
 
-  @OneToMany(() => Registrations, registrations => registrations.user_id )
+  @OneToMany(() => Registrations, registrations => registrations.userId )
   registrations: Registrations[];
 }
   

@@ -20,16 +20,16 @@ export class Events {
   desciption: string;
 
   @Column("bool")
-  is_open : boolean;
+  isOpen : boolean;
 
   @Column("bool")
-  is_active: boolean;
+  isActive: boolean;
 
   @Column("int")
-  places_nb: number;
+  placesNb: number;
 
   @Column("int")
-  admin_id: number;
+  adminId: number;
 
   @Column({
     type: "set",
@@ -41,7 +41,7 @@ export class Events {
   date: Date;
 
   @Column("datetime")
-  created_at: Date;
+  createdAt: Date;
 
   @OneToMany(() => Documents, document => document.id)
   documents: Documents[];

@@ -9,10 +9,10 @@ export class Registrations {
     id: number;
   
     @Column()
-    public user_id!: number;
+    public userId!: number;
 
     @Column()
-    public event_id!: number;
+    public eventId!: number;
 
     @ManyToOne(() => Users, users => users.id)
     public user!: Users;
