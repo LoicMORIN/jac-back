@@ -13,10 +13,10 @@ export class Users {
   @Column("varchar", { length: 255 })
   password: string;
   
-  @Column("varchar", { length: 255 })
+  @Column("varchar",{ length: 255 })
   firstName: string;
   
-  @Column("varchar", { length: 255 })
+  @Column("varchar",{ length: 255 })
   lastName: string;
   
   @Column("datetime")
@@ -34,7 +34,7 @@ export class Users {
   @ManyToOne(() => Roles, roles => roles.id)
   roles: Roles;
 
-  @OneToMany(() => Registrations, registrations => registrations.userId )
+  @OneToMany(() => Registrations, registrations => registrations.user)
   registrations: Registrations[];
 }
   

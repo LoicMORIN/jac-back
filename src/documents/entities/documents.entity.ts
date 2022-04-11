@@ -1,5 +1,5 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
-
+import {Entity, PrimaryGeneratedColumn, Column, ManyToOne} from "typeorm";
+import { Events } from "src/events/entities/events.entity";
 
 @Entity()
 export class Documents {
@@ -14,5 +14,7 @@ export class Documents {
   
     @Column("varchar", { length: 255 })
     path: string;
-  
+
+    @ManyToOne(() => Events, (events) => events.documents)
+    event: Events
 }

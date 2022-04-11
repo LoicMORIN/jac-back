@@ -14,10 +14,10 @@ export class Registrations {
     @Column()
     public eventId!: number;
 
-    @ManyToOne(() => Users, users => users.id)
+    @ManyToOne(() => Users, users => users.registrations)
     public user!: Users;
 
-    @ManyToOne(() => Events, events => events.id)
+    @ManyToOne(() => Events, events => events.registrations)
     public event!: Events;
   }
   
