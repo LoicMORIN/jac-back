@@ -16,9 +16,10 @@ export class UsersService {
     return `This action returns a #${id} user`;
   }
 
-  findAuth(email: string) {
-    return `This action returns a #${1} user`;
+  findAuth(email: string, password : string) {
+    return ;
   }
+  
   update(id: number, updateUserDto: UpdateUserDto) {
     return `This action updates a #${id} user`;
   }

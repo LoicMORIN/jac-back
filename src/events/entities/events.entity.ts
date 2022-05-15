@@ -1,7 +1,8 @@
-import {Entity, PrimaryGeneratedColumn, Column, OneToMany} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToOne} from "typeorm";
 import {Documents} from '../../documents/entities/documents.entity';
 import {Users} from '../../users/entities/users.entity';
-import { Registrations } from "src/registrations/entities/registrations.entity";
+import {Registrations} from "src/registrations/entities/registrations.entity";
+import {Categories} from '../../categories/entities/category.entity';
 
 export enum events_category { 
   C1 = "C1",  
@@ -44,8 +45,7 @@ export class Events {
   @Column("datetime")
   createdAt: Date;
 
-
-  @OneToMany(() => Documents, (document) => document.event)
+  @ManyToOne(() => Documents, (document) => document.event)
   documents: Documents[]
   
   @OneToMany(() => Users, users => users.id)
@@ -53,4 +53,5 @@ export class Events {
 
   @OneToMany(() => Registrations, registration => registration.event)
   public registrations!: Registrations[];
+
 }

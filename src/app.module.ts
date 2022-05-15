@@ -8,22 +8,25 @@ import { QuestionsModule } from './questions/questions.module';
 import { DocumentsModule } from './documents/documents.module';
 import { EventsModule } from './events/events.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CategoriesModule } from './categories/categories.module';
 
 @Module({
   imports: [UsersModule, RegistrationsModule, RolesModule, QuestionsModule, DocumentsModule, EventsModule,
     TypeOrmModule.forRoot({
-      type: 'mysql',
+      type: 'postgres',
+      driver: 'postgres',
       host: 'localhost',
-      port: 3000,
-      username: "test",
-      password: "test",
-      database: "test",
+      port: 5432,
+      username: "postgres",
+      password: "Cleloieli@94",
+      database: "jac",
       entities: ["entities/*.js"],
       migrationsTableName: "custom_migration_table",
-      migrations: ["migration/*.js"],
+      migrations: ["migrations/*.js"],
       cli: {
-          "migrationsDir": "migration"
+          "migrationsDir": "migrations"
       }}),
+    CategoriesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
